@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>jbank</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+	img{
+		width:20%;
+		
+	}
+	.bloque input{
+		float: left;
+	}.bloque{
+		text-align: right;
+	}
+	.opciones{
+		font-size: 80%;
+	}
+</style>
+<body>
+	
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-card" style="width:25%;right:0;">
+  <h3 class="w3-bar-item">registrarse</h3>
+  <form class="w3-container" action="inicio.php" method="post" >
+  	<label>Nick</label>
+	<input class="w3-input" type="text" name="nick">
+
+	<label>correo electronico</label>
+	<input class="w3-input" type="text" name="email">
+	
+	<label>contraseña</label>
+	<input class="w3-input" type="password" name="contraseña"><br>
+	<div class="bloque">
+	<input type="submit" class="w3-button w3-black" value="Registrar">
+	</div>
+	
+	</form>
+</div>
+
+<!-- Page Content -->
+<div style="margin-right:25%">
+
+<div class="w3-container w3-teal">
+  <h1><img src="titulo.png"></h1>
+</div>
+
+<img src="fondo.jpeg" alt="Car" style="width:100%">
+
+
+</div>
+  <?php
+        include ("coneccion.php");
+    	$conn=conectar();
+    	 if(isset($_POST["nick"])){
+    	$nick=$_POST["nick"];
+    	$email=$_POST["email"];
+    	$contraseña=$_POST[md5("dormir")];
+    }
+    $sql = "INSERT INTO  (usuario,email,contraseña) 
+VALUES ('$nick','$email',$contraseña')";
+if (mysqli_query($conn, $sql)) {
+    echo"";
+    echo '<meta http-equiv="refresh" content="0; URL=index.php?creado=1">';
+    
+} else {
+    echo "<p style='color:red;'>este usuario ya existe</p>";
+}
+
+  ?>
+      
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="insertarDatos.php" method="post">
+nombre<input type="text" name="nombre" pattern="[A-Z a-z]{1,}" required="" placeholder="juan"><br>
+primer apellido<input type="text" name="apellido1" pattern="[A-Za-z]{1,}" required="" placeholder="gomez"><br>
+segindo apellido<input type="text" name="apellido2" pattern="[A-Za-z]{1,}" required="" placeholder="vidal"><br>
+sexo <select name="sexo" required="">
+    	<option value="hombre">hombre</option>
+    	<option value="mujer">mujer</option>
+    	<option value="otros">otros</option>
+    </select><br>
+fecha de nacimiento<input type="date" name="fecha" required=""><br>
+nacionalidad<select name="nacionalidad" required="">
+    	<option value="Esp">España</option>
+    	<option value="Fra">Francia</option>
+    	<option value="Ita">Italia</option>
+    </select><br>
+DNI<input type="text" name="NIF" pattern="[0-9]{8}[A-Z]{1}" required="" placeholder="12345678A"><br>
+correo electronico<input type="email" name="email" required="" placeholder="Ejemplo@ejemplo.es"><br>
+residencia<select name="residencia" required="">
+    	<option value="Esp">España</option>
+    	<option value="Fra">Francia</option>
+    	<option value="Ita">Italia</option>
+    </select><br>
+Codigo Postal<input type="text" name="cp" pattern="[0-9]{5}" required="" placeholder="12345"><br>
+direccion<input type="text" name="direccion" required="" placeholder="calle cualquiera nº"><br>
+Pueblo/Ciudad<input type="text" name="ciudad" required="" placeholder="ciudad"><br>
+domicilo fiscal<select name="fiscal"  required="">
+    	<option value="Esp">España</option>
+    	<option value="Fra">andorra</option>
+    	<option value="Ita">Italia</option>
+    </select><br>
+telefono<input type="tel" name="telefono" pattern="[0-9]{9}" required="" placeholder="123456789"><br><br>
+usuario<input type="text" name="usuario"  required="" placeholder="juan123"><br>
+contraseña<input type="password" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"required="omg" title="minimo 8 caracteres mayscula y numero"><br>
+pregunta secreta<select name="pregunta"  required="">
+    	<option value="fecha de nacimiento">fecha de nacimiento</option>
+    	<option value="nombre de mascota">nombre de mascota</option>
+    	<option value="como estas">como estas</option>
+    </select><br>
+    respuesta<input type="text" name="respuesta" required=""><br>
+    codigo de registro<input type="text" name="codigo" pattern="[0-9]{1,}" required=""><br>
+<input type="submit" value="crear">
+</form>
+
+
+</body>
+</html>

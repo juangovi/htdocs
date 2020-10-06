@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-image: url("fondo.jpeg"); 
+		}
+		img{
+			margin-left: 25%;
+			margin-top: 3%;
+			margin-bottom: 5%;
+		}
+	</style>
+</head>
+<body>
+<img src="titulo.png">
+<form action="formularioAlta.php" method="post">
+nombre<input type="text" name="titulo" pattern="[A-Za-z0-9]{1,45}" required=""><br>
+apellidos<input type="text" name="autor" pattern="[A-Za-z]{1,45}" required=""><br>
+numero de cuenta<input type="text" name="editorial" pattern="[A-Z a-z]{1,45}" required=""><br>
+dni<input type="text" name="prestado"-><br>
+provincias<input type="text" name="fechaPrestamo" ><br>
+municipio<input type="text" name="fechaDevolucion" ><br>
+salario<input type="text" name="isbn" required="" size="45" required=""><br>
+contraseña<input type="text" name="isbn" required="" size="45" required="">
+imgagin de perfil<input type="text name="fechaAlta" step="2"><br>
+<input type="submit" value="dar alta">
+</form>
+
+</body>
+</html>

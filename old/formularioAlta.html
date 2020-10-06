@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-image: url("C:/Users/juana/Pictures/tipos-de-banco.jpeg");
+		}
+	</style>
+</head>
+<body>
+<img src="C:/Users/juana/Pictures/nombre-removebg-preview.png">
+<form action="formularioAlta.php" method="post">
+nombre<input type="text" name="titulo" pattern="[A-Za-z0-9]{1,45}" required=""><br>
+apellidos<input type="text" name="autor" pattern="[A-Za-z]{1,45}" required=""><br>
+numero de cuenta<input type="text" name="editorial" pattern="[A-Z a-z]{1,45}" required=""><br>
+dni<input type="checkbox" name="prestado" value="1"><br>
+provincias<input type="date" name="fechaPrestamo" ><br>
+municipio<input type="date" name="fechaDevolucion" ><br>
+salario<input type="text" name="isbn" required="" size="45" required=""><br>
+imgagin de perfil<input type="date" name="fechaAlta" step="2"><br>
+<input type="submit" value="dar alta">
+</form>
+
+</body>
+</html>
