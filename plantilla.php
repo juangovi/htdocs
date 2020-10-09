@@ -10,7 +10,7 @@
 <html>
 <head>
 <script language="javascript">
-s</script>
+</script>
 </head>
 </html>
 document.write("");
